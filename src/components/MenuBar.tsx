@@ -8,7 +8,7 @@ export default function MenuBar() {
   const [activeItem, setActiveItem] = useState<string | null>(null)
 
   return (
-    <div className="bg-[#252526] text-[#CCCCCC] text-sm">
+    <div className="bg-[#252526] text-[#CCCCCC] text-sm border-b border-[#3C3C3C]">
       <div className="flex items-center">
         <div className="flex-1 flex">
           {menuItems.map((item) => (

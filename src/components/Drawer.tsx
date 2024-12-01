@@ -1,37 +1,42 @@
 'use client'
 
-import { FolderIcon, FileIcon, ChevronDownIcon } from 'lucide-react'
-
-const files = [
-  { name: 'home.jsx', type: 'file', icon: 'jsx' },
-  { name: 'about.html', type: 'file', icon: 'html' },
-  { name: 'contact.css', type: 'file', icon: 'css' },
-  { name: 'projects.js', type: 'file', icon: 'js' },
-  { name: 'github.md', type: 'file', icon: 'md' },
-]
+import { ChevronDownIcon, MoreHorizontal } from 'lucide-react'
+import Image from 'next/image'
+import { useState } from 'react'
+import { initialTabs } from '@/data/tabs'
 
 export default function Drawer() {
+  const [activeTab, setActiveTab] = useState<string | null>(null)
   return (
-    <div className="bg-[#252526] text-[#CCCCCC] w-64 flex-shrink-0 overflow-y-auto">
-      <div className="p-2">
+    <div className="bg-[#252526] text-[#CCCCCC] w-64 flex-shrink-0 overflow-y-auto border-r border-[#3C3C3C]">
         <div className="flex items-center justify-between mb-2">
-          <span className="font-semibold">EXPLORER</span>
-          <ChevronDownIcon size={16} />
+          <span className="p-2">EXPLORER</span>
+          <MoreHorizontal size={16} className="mr-2"/>
         </div>
         <div className="mb-2">
           <div className="flex items-center">
             <ChevronDownIcon size={16} className="mr-1" />
-            <FolderIcon size={16} className="mr-1 text-[#dcb67a]" />
-            <span>PORTFOLIO</span>
+            <span className="font-bold">PORTFOLIO</span>
           </div>
         </div>
-        {files.map((file) => (
-          <div key={file.name} className="flex items-center py-1">
-            <FileIcon size={16} className={`mr-1 ${getIconColor(file.icon)}`} />
-            <span>{file.name}</span>
+        <div className="flex flex-col">
+          {initialTabs.map((tab) => (
+            <div key={tab.id} className={`flex items-center cursor-pointer py-1 pl-2 
+          ${
+            activeTab === tab.id ? 'bg-[#3C3C3C] text-white' : 'hover:bg-[#2D2D2D]'
+          }`}
+          onClick={() => setActiveTab(tab.id)}
+        >
+            <Image src={tab.icon} 
+                alt={tab.name} 
+                width={16} 
+                height={16} 
+                className={`mr-1 ${getIconColor(tab.icon)}`} 
+            />
+            <span>{tab.name}</span>
           </div>
         ))}
-      </div>
+        </div>
     </div>
   )
 }

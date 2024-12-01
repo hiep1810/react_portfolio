@@ -1,5 +1,5 @@
-import PortfolioHero from "@/components/Portfolio";
+import Portfolio from "@/components/Portfolio";
 
 export default function Home() {
-  return <PortfolioHero />;
+  return <Portfolio />;
 }
