@@ -1,13 +1,13 @@
-'use client'
-
 import MenuBar from './MenuBar'
 import Drawer from './Drawer'
+import SidebarIcons from './SidebarIcons'
 
 export default function PortfolioHero() {
   return (
     <div className="min-h-screen flex flex-col bg-[#1E2022]">
       <MenuBar />
       <div className="flex-1 flex">
+        <SidebarIcons />
         <Drawer />
         <div className="flex-1 flex items-center justify-between p-8 relative overflow-hidden">
           <div className="z-10">
