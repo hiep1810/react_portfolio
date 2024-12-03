@@ -5,3 +5,5 @@ export const initialTabs = [
   { id: 'projects', name: 'projects.js', icon: '/icons/js.svg' },
   { id: 'github', name: 'github.md', icon: '/icons/md.svg' },
 ] 
+
+export const menuItems = ['File', 'Edit', 'View', 'Go', 'Run', 'Terminal', 'Help']

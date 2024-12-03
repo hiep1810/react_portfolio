@@ -4,10 +4,11 @@ import { useState } from 'react'
 import { X } from 'lucide-react'
 import Image from 'next/image'
 import { initialTabs } from '@/data/tabs'
+import { useTab } from '@/context/TabContext'
 
 export default function EditorTabs() {
+  const { activeTab, setActiveTab } = useTab()
   const [tabs, setTabs] = useState(initialTabs)
-  const [activeTab, setActiveTab] = useState('home')
 
   const closeTab = (id: string) => {
     setTabs(tabs.filter(tab => tab.id !== id))

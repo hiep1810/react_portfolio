@@ -1,12 +1,8 @@
 'use client'
 
-import { useState } from 'react'
+import { menuItems } from '@/data/tabs'
 
-const menuItems = ['File', 'Edit', 'View', 'Go', 'Run', 'Terminal', 'Help']
-
-export default function MenuBar() {
-  const [activeItem, setActiveItem] = useState<string | null>(null)
-
+export default function MenuBar() {  
   return (
     <div className="bg-[#252526] text-[#CCCCCC] text-sm border-b border-[#3C3C3C]">
       <div className="flex items-center">
@@ -14,11 +10,7 @@ export default function MenuBar() {
           {menuItems.map((item) => (
             <button
               key={item}
-              className={`px-3 py-1 hover:bg-[#3C3C3C] ${
-                activeItem === item ? 'bg-[#3C3C3C]' : ''
-              }`}
-              onMouseEnter={() => setActiveItem(item)}
-              onMouseLeave={() => setActiveItem(null)}
+              className={`px-3 py-1 hover:bg-[#3C3C3C]`}
             >
               {item}
             </button>

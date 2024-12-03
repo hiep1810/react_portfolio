@@ -1,5 +1,10 @@
 import Portfolio from "@/components/Portfolio";
+import { TabProvider } from "@/context/TabContext";
 
 export default function Home() {
-  return <Portfolio />;
+  return (
+    <TabProvider>
+      <Portfolio />
+    </TabProvider>
+  );
 }
