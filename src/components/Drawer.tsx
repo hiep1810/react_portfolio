@@ -7,7 +7,9 @@ import { initialTabs } from '@/data/tabs'
 import { useTab } from '@/context/TabContext'
 
 export default function Drawer() {
-  const [activeTab, setActiveTab] = useState<string | null>(null)
+  const { activeTab, setActiveTab } = useTab()
+  const [isOpen, setIsOpen] = useState(true)
+
   return (
     <div className="bg-[#252526] text-[#CCCCCC] w-64 flex-shrink-0 overflow-y-auto border-r border-[#3C3C3C]">
       <div className="flex items-center justify-between mb-2">
