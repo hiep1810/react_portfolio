@@ -5,10 +5,14 @@ import { X } from 'lucide-react'
 import Image from 'next/image'
 import { initialTabs } from '@/data/tabs'
 import { useTab } from '@/context/TabContext'
+import { usePathname, useRouter } from 'next/navigation'
+
 
 export default function EditorTabs() {
   const { activeTab, setActiveTab } = useTab()
   const [tabs, setTabs] = useState(initialTabs)
+  const pathname = usePathname()
+  const router = useRouter()
 
   const closeTab = (id: string) => {
     setTabs(tabs.filter(tab => tab.id !== id))
@@ -23,9 +27,12 @@ export default function EditorTabs() {
         <button
           key={tab.id}
           className={`flex items-center px-3 py-2 border-r border-[#3C3C3C] min-w-[120px] group ${
-            activeTab === tab.id ? 'bg-[#1E1E1E] text-white border-t-2 border-t-[#4A9FFF]' : 'hover:bg-[#2D2D2D]'
+            activeTab === tab.id && pathname === `/${tab.name.toLowerCase()}` ? 'bg-[#1E1E1E] text-white border-t-2 border-t-[#4A9FFF]' : 'hover:bg-[#2D2D2D]'
           }`}
-          onClick={() => setActiveTab(tab.id)}
+          onClick={() => {
+            setActiveTab(tab.id)
+            router.push(`${window.location.origin}/${tab.link}`)
+          }}
         >
           <Image 
             src={tab.icon}

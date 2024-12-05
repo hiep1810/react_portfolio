@@ -1,10 +1,5 @@
-import Portfolio from "@/components/Portfolio";
-import { TabProvider } from "@/context/TabContext";
+import { redirect } from 'next/navigation';
 
 export default function Home() {
-  return (
-    <TabProvider>
-      <Portfolio />
-    </TabProvider>
-  );
+  redirect('/portfolio');
 }
