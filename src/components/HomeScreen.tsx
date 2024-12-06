@@ -5,7 +5,7 @@ import EditorTabs from './layout/EditorTabs'
 import StatusBar from './layout/StatusBar'
 import Image from 'next/image'
 
-export default function Portfolio() {
+export default function HomeScreen() {
   return (
     <div className="min-h-screen flex flex-col bg-[#1E2022]">
       <MenuBar />
