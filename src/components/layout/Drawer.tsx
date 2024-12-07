@@ -6,10 +6,11 @@ import { useState } from 'react'
 import { initialTabs } from '@/data/tabs'
 import { useTab } from '@/context/TabContext'
 import { useIconButtons } from '@/context/IconButtonContext'
+import iconColor from '@/data/icon_color'
 
 export default function Drawer() {
   const { activeTab, setActiveTab } = useTab()
-  const { activeIconButton, setActiveIconButton } = useIconButtons()
+  const { activeIconButton } = useIconButtons()
   const [isOpen, setIsOpen] = useState(true)
 
   return (
@@ -39,7 +40,7 @@ export default function Drawer() {
                 alt={tab.name}
                 width={16}
                 height={16}
-                className={`mr-1 ${getIconColor(tab.icon)}`}
+                className={`mr-1 ${iconColor[tab.icon]}`}
               />
               <span>{tab.name}</span>
             </div>
@@ -50,20 +51,5 @@ export default function Drawer() {
   )
 }
 
-function getIconColor(icon: string) {
-  switch (icon) {
-    case 'jsx':
-      return 'text-[#61dafb]'
-    case 'html':
-      return 'text-[#e34c26]'
-    case 'css':
-      return 'text-[#563d7c]'
-    case 'js':
-      return 'text-[#f1e05a]'
-    case 'md':
-      return 'text-[#083fa1]'
-    default:
-      return 'text-[#CCCCCC]'
-  }
-}
+
 
