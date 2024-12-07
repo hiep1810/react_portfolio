@@ -5,7 +5,7 @@ import { IconButtonProvider } from "@/context/IconButtonContext";
 export default function ProjectsPage() {
   return (
     <IconButtonProvider>
-    <TabProvider>
+      <TabProvider>
         <ProjectsScreen />
       </TabProvider>
     </IconButtonProvider>
