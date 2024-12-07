@@ -22,7 +22,6 @@ export default function SidebarIcons() {
         <IconButton 
           key={icon.id}
           icon={icon.icon} 
-          id={icon.id} 
           isActive={activeIconButton === icon.id}
           onClick={() => handleIconClick(icon.id)}
         />
@@ -33,7 +32,7 @@ export default function SidebarIcons() {
   )
 }
 
-function IconButton({ icon: Icon, isActive = false, id, onClick }: { icon: React.ElementType; isActive?: boolean, id?: string, onClick?: () => void }) {
+function IconButton({ icon: Icon, isActive = false, onClick }: { icon: React.ElementType; isActive?: boolean, onClick?: () => void }) {
   return (
     <button
       className={`w-12 h-12 flex items-center justify-center text-[#858585] hover:text-white ${
