@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { X } from 'lucide-react'
 import Image from 'next/image'
 import { initialTabs } from '@/data/tabs'
@@ -27,7 +27,7 @@ export default function EditorTabs() {
         <button
           key={tab.id}
           className={`flex items-center px-3 py-2 border-r border-[#3C3C3C] min-w-[120px] group ${
-            activeTab === tab.id && pathname === `/${tab.name.toLowerCase()}` ? 'bg-[#1E1E1E] text-white border-t-2 border-t-[#4A9FFF]' : 'hover:bg-[#2D2D2D]'
+            activeTab === tab.id && pathname === `${tab.link}` ? 'bg-[#1E1E1E] text-white border-t-2 border-t-[#4A9FFF]' : 'hover:bg-[#2D2D2D]'
           }`}
           onClick={() => {
             setActiveTab(tab.id)

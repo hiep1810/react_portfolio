@@ -7,12 +7,14 @@ import { initialTabs } from '@/data/tabs'
 import { useTab } from '@/context/TabContext'
 import { useIconButtons } from '@/context/IconButtonContext'
 import iconColor from '@/data/icon_color'
+import { useRouter, usePathname } from 'next/navigation'
 
 export default function Drawer() {
   const { activeTab, setActiveTab } = useTab()
   const { activeIconButton } = useIconButtons()
   const [isOpen, setIsOpen] = useState(true)
-
+  const router = useRouter()
+  const pathname = usePathname()
   return (
     <div className={`bg-[#252526] text-[#CCCCCC] flex-shrink-0 overflow-y-auto border-r border-[#3C3C3C] 
       ${!activeIconButton ? 'w-0' : 'w-64'} transition-[width] duration-300`}>
@@ -31,9 +33,12 @@ export default function Drawer() {
           ${isOpen ? 'opacity-100' : 'opacity-0'}`}>
           {initialTabs.map((tab) => (
             <div key={tab.id} className={`flex items-center cursor-pointer py-1 pl-2 
-          ${activeTab === tab.id ? 'bg-[#3C3C3C] text-white' : 'hover:bg-[#2D2D2D]'
+          ${activeTab === tab.id && pathname === `${tab.link}` ? 'bg-[#3C3C3C] text-white' : 'hover:bg-[#2D2D2D]'
               }`}
-              onClick={() => setActiveTab(tab.id)}
+              onClick={() => {
+                setActiveTab(tab.id)
+                router.push(`${window.location.origin}/${tab.link}`)
+              }}
             >
               <Image src={tab.icon}
                 alt={tab.name}

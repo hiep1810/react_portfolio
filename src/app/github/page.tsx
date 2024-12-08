@@ -1,9 +1,9 @@
-import HomeScreen from "@/components/HomeScreen";
+import GithubScreen from "@/components/GithubScreen";
 import { IconButtonProvider } from "@/context/IconButtonContext";
 import { TabProvider } from "@/context/TabContext";
 
-export default function HomePage() {
+export default function GithubPage() {
   return (
-    <HomeScreen />
+    <GithubScreen />
   );
 } 

@@ -9,7 +9,7 @@ export default function SidebarIcons() {
 
   const handleIconClick = (id: string) => {
     if (activeIconButton === id) {
-      setActiveIconButton(null)
+      setActiveIconButton('')
     } else {
       setActiveIconButton(id)
     }

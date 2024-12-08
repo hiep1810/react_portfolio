@@ -3,7 +3,7 @@ import StatusBar from './layout/StatusBar';
 import Drawer from './layout/Drawer';
 import SidebarIcons from './layout/SidebarIcons';
 
-export default function ProjectsScreen() {
+export default function GithubScreen() {
   return (
     <div className="h-screen flex flex-col">
       <MenuBar />
