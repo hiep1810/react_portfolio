@@ -12,9 +12,7 @@ export default function AboutScreen() {
         <SidebarIcons />
         <Drawer />
         <main className="flex-1 bg-[#1e1e1e] overflow-auto">
-          <div className="scrollbar-vscode">
-            <EditorTabs />
-          </div>
+          <EditorTabs />
           {/* Projects content here */}
         </main>
       </div>

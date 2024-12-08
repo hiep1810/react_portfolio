@@ -13,9 +13,7 @@ export default function HomeScreen() {
         <SidebarIcons />
         <Drawer />
         <div className="flex-1 flex flex-col overflow-hidden">
-          <div className="scrollbar-vscode">
-            <EditorTabs />
-          </div>
+          <EditorTabs />
           <div className="flex-1 flex items-center justify-between p-8 relative overflow-hidden">
       <Image
         src="/images/bg-image.jpg"
