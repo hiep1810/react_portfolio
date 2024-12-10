@@ -14,7 +14,6 @@ interface GithubData {
   followers: number;
   following: number;
   repos_url: string;
-  [key: string]: any;
 }
 
 export default function GithubScreen() {
