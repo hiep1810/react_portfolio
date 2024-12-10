@@ -7,6 +7,7 @@ import SidebarIcons from './layout/SidebarIcons';
 import EditorTabs from './layout/EditorTabs';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+
 interface GithubData {
   login: string;
   avatar_url: string;
@@ -16,9 +17,19 @@ interface GithubData {
   repos_url: string;
 }
 
+interface Repo {
+  id: number;
+  name: string;
+  html_url: string;
+  description: string | null;
+  stargazers_count: number;
+  language: string | null;
+  updated_at: string;
+}
+
 export default function GithubScreen() {
   const [githubData, setGithubData] = useState<GithubData | null>(null);
-  const [repos, setRepos] = useState<any[]>([]);
+  const [repos, setRepos] = useState<Repo[]>([]);
 
   useEffect(() => {
     const githubUrl = 'https://api.github.com/users/hiep1810';
