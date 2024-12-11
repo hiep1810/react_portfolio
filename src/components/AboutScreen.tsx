@@ -11,9 +11,9 @@ export default function AboutScreen() {
       <div className="flex-1 flex overflow-hidden">
         <SidebarIcons />
         <Drawer />
-        <main className="flex-1 bg-[#1e1e1e] overflow-hidden">
+        <main className="flex-1 bg-[#1e1e1e]">
           <EditorTabs />
-          <section className="p-10 bg-[#1E2022] text-center h-full overflow-auto scrollbar-vscode">
+          <section className="p-10 bg-[#1E2022] text-center h-full overflow-auto scrollbar-vscode-thick">
             <h1 className="text-4xl font-bold text-white mb-4">
               🚀 COBOL Developer | Mainframe Expert 🖥️
             </h1>

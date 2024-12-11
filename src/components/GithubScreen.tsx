@@ -48,13 +48,13 @@ export default function GithubScreen() {
   return (
     <div className="h-screen flex flex-col">
       <MenuBar />
-      <div className="flex-1 flex">
+      <div className="flex-1 flex overflow-hidden">
         <SidebarIcons />
         <Drawer />
-        <main className="flex-1 bg-[#1e1e1e] overflow-auto">
+        <main className="flex-1 bg-[#1e1e1e]">
           <EditorTabs />
           {/* Projects content here */}
-          <div className="p-10 bg-[#1E2022] text-center h-full overflow-auto text-white">
+          <div className="p-10 bg-[#1E2022] text-center h-full overflow-auto scrollbar-vscode-thick text-white">
             <div className="flex flex-col space-y-8">
               {/* User info */}
               <div className="flex flex-row items-stretch justify-center w-full">
@@ -93,7 +93,7 @@ export default function GithubScreen() {
                 {repos.map((repo) => (
                   <div key={repo.id} className="bg-[#1A1A1A] p-6 rounded-lg text-left">
                     <div className="flex items-center justify-between mb-4">
-                      <h3 className="text-xl font-semibold text-blue-400">
+                      <h3 className="text-xl font-semibold text-blue-400 overflow-hidden text-ellipsis">
                         <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
                           {repo.name}
                         </a>

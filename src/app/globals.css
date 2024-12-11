@@ -53,3 +53,21 @@ body {
 .scrollbar-vscode::-webkit-scrollbar-thumb:hover {
   background-color: #4f4f4f;
 }
+
+.scrollbar-vscode-thick {
+  scrollbar-width: thick;
+  scrollbar-color: #424242 transparent;
+}
+
+.scrollbar-vscode-thick::-webkit-scrollbar {
+  height: 16px;
+}
+
+.scrollbar-vscode-thick::-webkit-scrollbar-thumb {
+  background-color: #424242;
+  border-radius: 4px;
+}
+
+.scrollbar-vscode-thick::-webkit-scrollbar-thumb:hover {
+  background-color: #4f4f4f;
+}
