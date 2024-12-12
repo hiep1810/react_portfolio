@@ -30,7 +30,7 @@ export default function Drawer() {
         </div>
 
         <div className={`flex flex-col overflow-hidden transition-[max-height]
-          ${isOpen ? 'max-h-full' : 'max-h-0'}`}>
+          ${isOpen ? 'h-auto' : 'h-0'}`}>
           {initialTabs.map((tab) => (
             <div key={tab.id} className={`flex items-center cursor-pointer py-1 pl-2 
           ${activeTab === tab.id && pathname === `${tab.link}` ? 'bg-[#3C3C3C] text-white' : 'hover:bg-[#2D2D2D]'
