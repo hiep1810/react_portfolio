@@ -29,7 +29,7 @@ interface Repo {
 
 export default function GithubScreen() {
   const [githubData, setGithubData] = useState<GithubData | null>(null);
-  const [repos, setRepos] = useState<Repo[]>([]);
+  const [repos, setRepos] = useState<Repo[] | null>(null);
 
   useEffect(() => {
     const githubUrl = 'https://api.github.com/users/hiep1810';
@@ -51,9 +51,10 @@ export default function GithubScreen() {
       <div className="flex-1 flex overflow-hidden">
         <SidebarIcons />
         <Drawer />
-        <main className="flex-1 bg-[#1e1e1e]">
+        <main className="flex-1 bg-[#1e1e1e] overflow-hidden">
           <EditorTabs />
           {/* Projects content here */}
+          {githubData && repos && (
           <div className="p-10 bg-[#1E2022] text-center h-full overflow-auto scrollbar-vscode-thick text-white">
             <div className="flex flex-col space-y-8">
               {/* User info */}
@@ -119,6 +120,7 @@ export default function GithubScreen() {
               </div>
             </div>
           </div>
+          )}
         </main>
       </div>
       <StatusBar />
