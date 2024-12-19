@@ -41,7 +41,7 @@ export default function EditorTabs() {
               height={16}
               className="mr-2"
             />
-            <span className="truncate">{tab.name}</span>
+            <span className="truncate pr-2">{tab.name}</span>
             <X
               size={14}
               className="ml-auto opacity-0 group-hover:opacity-100 hover:bg-[#3C3C3C] hover:rounded-full ml-2"
