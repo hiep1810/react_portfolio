@@ -19,22 +19,24 @@ export default function ProjectsScreen() {
             <div className="grid grid-cols-2 gap-4 max-w-4xl mx-auto">
               <div className="bg-[#1A1A1A] p-6 rounded-lg text-left">
                 <div className="mb-4">
-                  <img src="/images/bg-image.jpg" alt="Portfolio preview" className="w-full h-48 object-cover rounded-lg" />
+                  <img src="/images/flash_lingo.png" alt="Portfolio preview" className="w-full h-48 object-cover rounded-lg" />
                 </div>
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-semibold text-blue-400 overflow-hidden text-ellipsis">
                     <a href="https://portfolio-hiep1810.vercel.app/" target="_blank" rel="noopener noreferrer">
-                      Portfolio
+                      FlashLingo
                     </a>
                   </h3>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">
-                  Một trang web portfolio được xây dựng bằng Next.js và Tailwind CSS
+                  Flash Lingo is a flashcard app that helps you learn new words.
                 </p>
                 <div className="flex items-center space-x-4 text-sm text-gray-400">
-                  <span className="flex items-center">
-                    <span className="w-3 h-3 rounded-full bg-blue-500 mr-2"></span>
+                  <span className={`flex items-center text-white border border-blue-500 rounded-md px-2 py-1`}>
                     Next.js
+                  </span>
+                  <span className={`flex items-center text-white border border-green-500 rounded-md px-2 py-1`}>
+                    Tailwind CSS
                   </span>
                 </div>
               </div>
@@ -54,9 +56,11 @@ export default function ProjectsScreen() {
                   Ứng dụng chat thời gian thực sử dụng Next.js, Firebase và Tailwind CSS
                 </p>
                 <div className="flex items-center space-x-4 text-sm text-gray-400">
-                  <span className="flex items-center">
-                    <span className="w-3 h-3 rounded-full bg-blue-500 mr-2"></span>
+                  <span className={`flex items-center text-white border border-blue-500 rounded-md px-2 py-1`}>
                     Next.js
+                  </span>
+                  <span className={`flex items-center text-white border border-green-500 rounded-md px-2 py-1`}>
+                    Tailwind CSS
                   </span>
                 </div>
               </div>
