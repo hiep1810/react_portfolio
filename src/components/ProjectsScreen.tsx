@@ -43,17 +43,17 @@ export default function ProjectsScreen() {
 
               <div className="bg-[#1A1A1A] p-6 rounded-lg text-left">
                 <div className="mb-4">
-                  <img src="/images/bg-image.jpg" alt="Chat App preview" className="w-full h-48 object-cover rounded-lg" />
+                  <img src="/images/japlify.png" alt="Japlify preview" className="w-full h-48 object-cover rounded-lg" />
                 </div>
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-semibold text-blue-400 overflow-hidden text-ellipsis">
-                    <a href="https://chat-app-hiep1810.vercel.app/" target="_blank" rel="noopener noreferrer">
-                      Chat App
+                    <a href="https://japlify.vercel.app/" target="_blank" rel="noopener noreferrer">
+                      Japlify - Japanese Text Converter
                     </a>
                   </h3>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">
-                  Ứng dụng chat thời gian thực sử dụng Next.js, Firebase và Tailwind CSS
+                  This tool helps you convert text between different Japanese writing formats, including full-width/half-width characters, romaji, hiragana, and katakana.
                 </p>
                 <div className="flex items-center space-x-4 text-sm text-gray-400">
                   <span className={`flex items-center text-white border border-blue-500 rounded-md px-2 py-1`}>
