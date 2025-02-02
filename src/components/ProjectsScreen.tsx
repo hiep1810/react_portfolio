@@ -71,7 +71,7 @@ export default function ProjectsScreen() {
                 </div>
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-semibold text-blue-400 overflow-hidden text-ellipsis">
-                    <a href="https://wheeloffortune.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://next-wheeloffortune.vercel.app/" target="_blank" rel="noopener noreferrer">
                       Wheel of Fortune
                     </a>
                   </h3>
@@ -80,6 +80,31 @@ export default function ProjectsScreen() {
                   Wheel of Fortune is a game for fun.
                 </p>
                 <div className="flex items-center space-x-4 text-sm text-gray-400">
+                  <span className={`flex items-center text-white border border-blue-500 rounded-md px-2 py-1`}>
+                    Next.js
+                  </span>
+                  <span className={`flex items-center text-white border border-green-500 rounded-md px-2 py-1`}>
+                    Tailwind CSS
+                  </span>
+                </div>
+              </div>
+
+              <div className="bg-[#1A1A1A] p-6 rounded-lg text-left">
+                <div className="mb-4">
+                  <img src="/images/pomofocus-clone.png" alt="Pomofocus clone preview" className="w-full h-48 object-cover rounded-lg" />
+                </div>
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-xl font-semibold text-blue-400 overflow-hidden text-ellipsis">
+                    <a href="https://pomodoro-clone-gamma.vercel.app/" target="_blank" rel="noopener noreferrer">
+                      Pomofocus Clone
+                    </a>
+                  </h3>
+                </div>
+                <p className="text-gray-300 text-sm mb-4">
+                  Pomofocus Clone is a clone of the Pomofocus app.
+                </p>
+                <div className="flex items-center space-x-4 text-sm text-gray-400">
+
                   <span className={`flex items-center text-white border border-blue-500 rounded-md px-2 py-1`}>
                     Next.js
                   </span>
